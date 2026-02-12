@@ -23,7 +23,7 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-const targetDate = new Date("2026-02-11T17:57:00").getTime();
+const targetDate = new Date("2026-02-14T00:00:00").getTime();
 let unlocked = false;
 let autoCloseTimeout = null;
 
