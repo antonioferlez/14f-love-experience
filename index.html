@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta 14F</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="fireworksCanvas"></canvas>
+
+<div class="container">
+
+    <header class="header">
+        <h1 class="date">14 de Febrero 2026</h1>
+    </header>
+
+    <div id="countdown" class="countdown">
+        <div class="time-block">
+            <div class="time-value" id="days">00</div>
+            <div class="time-label">Días</div>
+        </div>
+        <div class="time-block">
+            <div class="time-value" id="hours">00</div>
+            <div class="time-label">Horas</div>
+        </div>
+        <div class="time-block">
+            <div class="time-value" id="minutes">00</div>
+            <div class="time-label">Minutos</div>
+        </div>
+        <div class="time-block">
+            <div class="time-value" id="seconds">00</div>
+            <div class="time-label">Segundos</div>
+        </div>
+    </div>
+
+            <h3 class="paper-title">by: @antonioferlez</h3>
+
+    <div class="envelope-wrapper">
+        <div id="envelope" class="envelope locked">
+            
+            <!-- Tapa superior del sobre -->
+            <div class="top"></div>
+            
+            <!-- Cuerpo del sobre -->
+            <div class="envelope-body"></div>
+            
+            <!-- Carta -->
+            <div class="paper">
+                <h3 class="paper-title">Feliz San Valentín bb</h3>
+                <p class="paper-text">
+                    Gracias por ser esa persona lindísima, sabes que te deseo lo más bello de la vida, espero que siempre cumplas todos tus sueños y seas muy feliz siempre, que nunca nada te falte y cuente con tu amistad muchos años más.
+                </p>
+                <p class="paper-text">
+                    Te quiero muchooo y te llevaré en mi corazón siempre 
+                </p>
+                <h3 class="paper-title">para ti que siempre estás</h3>
+
+                <!-- Reproductor de audio (nota de voz) -->
+                <div class="audio-player" id="audioPlayer">
+                    <div class="audio-container">
+                        <button class="play-pause-btn" id="playPauseBtn" disabled>
+                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <svg class="pause-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                            </svg>
+                        </button>
+                        <div class="audio-info">
+                            <div class="audio-label">Nota de voz</div>
+                            <div class="audio-time">
+                                <span id="currentTime">0:00</span>
+                                <span class="time-separator">/</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        <div class="waveform">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <audio id="audioElement" preload="metadata">
+                        <source src="nota-de-voz.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="warning" class="warning hidden">
+        Lo siento, aún no puedes abrir la carta...
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
